@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perdóname 💔</title>
+
+  <style>
+    body {
+      background-color: #ffeef4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    img {
+      width: 220px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      color: #ff5c8a;
+      margin-top: 20px;
+    }
+
+    .botones {
+      margin-top: 30px;
+      position: relative;
+      height: 120px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #si {
+      background-color: #4CAF50;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔽 IMAGEN -->
+  <img src="gatito.JPG" alt="gatito">
+
+  <!-- 🔽 MENSAJE -->
+  <h1 id="mensaje"></h1>
+
+  <!-- 🔽 BOTONES -->
+  <div class="botones">
+    <button id="si">Sí</button>
+    <button id="no">No</button>
+  </div>
+
+  <script>
+    // ✏️ CAMBIA EL NOMBRE AQUÍ
+    const nombre = "Jhalissita";
+
+    document.getElementById("mensaje").innerText =
+      `¿Me perdonas, ${nombre}? 💔`;
+
+    document.getElementById("si").onclick = () => {
+      alert(`Gracias ${nombre} 💖 Prometo hacerlo mejor 🥺`);
+    };
+
+    const botonNo = document.getElementById("no");
+    botonNo.onmouseover = () => {
+      const x = Math.random() * 200;
+      const y = Math.random() * 80;
+      botonNo.style.left = x + "px";
+      botonNo.style.top = y + "px";
+    };
+  </script>
+
+</body>
+</html>
